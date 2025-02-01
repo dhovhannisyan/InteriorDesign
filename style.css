@@ -1,10 +1,77 @@
+/* Variables */
+:root {
+    --main-color-red: #f44336;
+}
+/* Rset styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    line-height: 1;
+}
+
+button {
+    background-color: inherit;
+    border-radius: 0;
+    border: 0;
+    color: inherit;
+    cursor: pointer;
 }
 
 ul {
     list-style: none;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    padding-top: 68px;
+}
+/* Common classes  */
+.logo {
+    text-decoration: none;
+    color: white;
+    font-size: 24px;
+}
+/* Header  */
+.header {
+    height: 68px;
+    padding: 8px 16px;
+    background-color: var(--main-color-red);
+    display: flex;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+}
+
+.sidebar__open-btn {
+    height: 52px;
+    width: 52px;
+    margin-right: 20px;
+}
+
+.sidebar__open-btn:hover {
+    background-color: #ccc;
+}
+
+.sidebar__open-btn:hover svg {
+    fill: black;
+}
+
+.sidebar__open-btn svg {
+    fill: white;
+}
+
+/* Media queris  */
+@media (min-width: 600px) {
+    body {
+        padding-top: 0;
+    }
+    /* Header  */
+    .header {
+        display: none;
+    }
+    
 }
 

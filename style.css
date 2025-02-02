@@ -1,3 +1,8 @@
+/* Fonts  */
+@font-face {
+    font-family: Poppins;
+    src: url(./fonts/Poppins/Poppins-Regular.ttf);
+  }
 /* Variables */
 :root {
     --main-color-red: #f44336;
@@ -7,7 +12,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    line-height: 1;
 }
 
 button {
@@ -40,6 +44,29 @@ body {
     color: white;
     font-size: 24px;
     font-weight: bold;
+}
+.section {
+    padding-top: 10px;
+    margin-bottom: 60px;
+}
+.section__heading {
+    margin-bottom: 30px;
+    color: var(--main-color-red);
+    font-size: 48px;
+    font-weight: bold;
+}
+.section__heading::after {
+    margin-top: 15px;
+    display: block;
+    content: "";
+    height: 10px;
+    width: 60px;
+    background-color: red;
+    border-radius: 4px;
+}
+
+.first-text {
+    margin-bottom: 15px;
 }
 /* Header  */
 .header {
@@ -148,9 +175,95 @@ body {
     scroll-behavior: smooth;
 }
 
-.main {
-    
+.main-wrapper h1 {
+    font-size: 64px;
+    font-weight: bold;
+    margin-top: 50px;
+    margin-bottom: 20px;
 }
+
+/* Sowcase  */
+.galery-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    column-gap: 16px;
+    row-gap: 8px;
+}
+
+.galery-list img {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.galery-list img:hover {
+    opacity: 1;
+}
+
+.image-viewer-dialog {
+    padding: 70px 10px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 4;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+}
+
+.image-viewer-dialog__close-btn {
+    width: 52px;
+    height: 70px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 5;
+}
+
+.image-viewer-dialog__close-btn:hover {
+    background-color: #ccc;
+}
+
+.image-viewer-dialog__close-btn:hover svg {
+    fill: black;
+}
+
+.img-wrapper {
+    max-width: 500px;
+}
+
+.image-viewer-dialog__image {
+    width: 100%;
+    height: auto;
+}
+
+.image-viewer-dialog__text {
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 16px;
+}
+
+/* Services  */
+
+/* Designers */
+.slogan {
+    margin: 16px 0;
+}
+
+/* Media queris  */
+@media (min-width: 600px) {
+    .main-wrapper {
+        padding: 0 20px;
+    }
+    .galery-list {
+        grid-template-columns: 1fr 1fr;
+    }
+    .img-wrapper {
+        max-width: 600px;
+    }
+}  
 
 /* Media queris  */
 @media (min-width: 992px) {
@@ -172,7 +285,10 @@ body {
     .sidebar__close-btn {
         display: none;
     }
-    
+    /* Sowcase  */
+    .img-wrapper {
+        max-width: 700px;
+    }
     
 }
 

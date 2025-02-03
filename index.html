@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Interior Design</title>
     <link rel="stylesheet" href="./style.css">
+    <script defer src="./script.js"></script>
 </head>
 <body>
     <!-- Header -->
@@ -20,10 +21,10 @@
     <aside class="sidebar">
         <!-- Sidebar close button-->
         <button class="sidebar__close-btn">Close Menu</button>
-        <!-- Logo -->
-        <a href="#home" class="logo">Company Name</a>
         <!-- Navigation  -->
         <nav class="main-nav">
+            <!-- Logo -->
+           <a href="#home" class="logo">Company Name</a>
             <ul class="nav-list">
                 <li class="nav-list__item">
                     <a href="#home">Home</a>
@@ -239,7 +240,7 @@
                     <!-- Message -->
                     <div class="contact-form__field">
                         <label for="message">Message</label>
-                        <textarea type="text" id="message"></textarea>
+                        <textarea rows="6" type="text" id="message"></textarea>
                     </div>
                     <button type="submit" class="contact-form__submit-btn">Send Message</button>
                 </form>

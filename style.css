@@ -44,6 +44,7 @@ body {
     color: white;
     font-size: 24px;
     font-weight: bold;
+    font-weight: 400;
 }
 .section {
     padding-top: 10px;
@@ -177,12 +178,12 @@ body {
 
 .main {
     padding: 0 16px;
+    padding-top: 50px;
 }
 
 .main-wrapper h1 {
     font-size: 64px;
     font-weight: bold;
-    margin-top: 50px;
     margin-bottom: 20px;
 }
 
@@ -235,6 +236,7 @@ body {
 
 .img-wrapper {
     max-width: 500px;
+    animation: grow .5s forwards ease-in-out;
 }
 
 .image-viewer-dialog__image {
@@ -405,6 +407,7 @@ body {
 @media (min-width: 600px) {
     .main {
         padding: 0 20px;
+        padding-top: 50px;
     }
     .galery-list {
         grid-template-columns: 1fr 1fr;
@@ -424,9 +427,13 @@ body {
     body {
         padding-top: 0;
     }
+    .logo {
+        font-weight: bold;
+    }
     /* Main  */
     .main {
         padding: 0 50px;
+        padding-top: 50px;
     }
     /* Header  */
     .header {
@@ -443,6 +450,17 @@ body {
     .img-wrapper {
         max-width: 700px;
     }
-    
+}
+
+/* Animations */
+@keyframes grow {
+    0% {
+        scale: 0;
+        opacity: 0;
+    }
+    100% {
+        scale: 1;
+        opacity: 1;
+    }
 }
 
